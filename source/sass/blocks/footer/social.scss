@@ -1,0 +1,20 @@
+.social__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -3px;
+}
+
+.social__item {
+  margin: 0 6px;
+  margin-bottom: 6px;
+}
+
+.social__link {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: block;
+  transition: 220ms all ease-in-out;
+}

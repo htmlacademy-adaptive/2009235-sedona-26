@@ -1,0 +1,56 @@
+.introduction__wrapper {
+  position: relative;
+
+  &--hero {
+    background-color: #5496bd;
+    background-image: url("../../../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 90px 0 85px 0;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 57px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-image: url("../../../img/intro-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+  }
+
+  &--info {
+    padding: 32px 0;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 37px;
+      position: absolute;
+      bottom: -21px;
+      width: 100%;
+      background-image: url("../../../img/intro-info-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+  }
+}
+
+.introduction__image {
+  width: 282px;
+  height: 214px;
+  display: block;
+  margin: 0 auto;
+}
+
+.introduction__title {
+  margin-bottom: 35px;
+  padding: 0 25px;
+}
+
+.introduction__description {
+  padding: 0 20px;
+}

@@ -1,0 +1,17 @@
+.header {
+  position: relative;
+  min-height: 56px;
+}
+
+.header__logo {
+  background-color: transparent;
+  width: 185px;
+  height: 95px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 1;
+}

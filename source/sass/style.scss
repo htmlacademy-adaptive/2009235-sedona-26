@@ -1,1 +1,17 @@
-// Начните писать стили здесь
+@use "./components/variables.scss";
+/*PAGE*/
+@use "./blocks/page.scss";
+/*HEAADER*/
+@use "./blocks/header/header.scss";
+@use "./blocks/header/main-nav.scss";
+@use "./blocks/header/site-list.scss";
+/*MAIN*/
+@use "./blocks/main/main-container.scss";
+@use "./blocks/main/introduction.scss";
+@use "./blocks/main/advantagers.scss";
+@use "./blocks/main/search.scss";
+@use "./blocks/main/map.scss";
+/*FOOTER*/
+@use "./blocks/footer/footer.scss";
+@use "./blocks/footer/social.scss";
+@use "./blocks/footer/copyright.scss";

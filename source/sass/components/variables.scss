@@ -1,0 +1,185 @@
+@use "./components/fonts.scss";
+@use "./components/colors-variadle.scss";
+@use "./mixins.scss";
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include mixins.visually-hidden;
+}
+
+button.button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+a.button,
+button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  background-color: colors-variadle.$special-cold-normal;
+  color: colors-variadle.$basic-white;
+  border-radius: 0;
+  box-shadow: none;
+  // Size
+  padding: 16px 40px;
+  min-width: 180px;
+  min-height: 58px;
+  // Text
+  text-align: center;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 220ms all ease-in-out;
+
+  &:hover {
+    background-color: colors-variadle.$special-cold-hover;
+  }
+
+  &:active {
+    background-color: colors-variadle.$special-cold-active;
+    color: opacify(colors-variadle.$special-cold-normal, 0.3);
+  }
+
+  &:disabled {
+    background-color: colors-variadle.$special-cold-disable;
+  }
+
+  &--block {
+    width: 100%;
+    max-width: 458px;
+    align-self: center;
+  }
+}
+
+.page__body {
+  background-color: colors-variadle.$basic-light;
+}
+
+.page__container {
+  background-color: colors-variadle.$basic-white;
+}
+
+.main-nav__toggle {
+  color: colors-variadle.$special-cold-normal;
+}
+
+.site-list__item {
+  background-color: colors-variadle.$special-cold-normal;
+}
+
+.site-list__item a {
+  color: colors-variadle.$basic-white;
+}
+
+.introduction__wrapper {
+  &--hero {
+    background-color: colors-variadle.$special-cold-active;
+  }
+}
+
+.introduction__title {
+  @include mixins.header-2;
+}
+
+.introduction__description {
+  @include mixins.paragraph;
+  color: colors-variadle.$basic-dark;
+}
+
+.advantages__title {
+  @include mixins.header-2;
+}
+
+.advantages__description {
+  @include mixins.paragraph;
+}
+
+.advantagers__item {
+  &--pre-photo {
+    background-color: colors-variadle.$special-cold-normal;
+    color: colors-variadle.$basic-white;
+  }
+
+  &--housing,
+  &--eat,
+  &--souvenirs {
+    background-color: colors-variadle.$basic-white;
+  }
+
+  &--group {
+    background-color: colors-variadle.$basic-light;
+  }
+
+  &--group + &--group::after {
+    background-color: colors-variadle.$basic-gray;
+  }
+}
+
+.search__title {
+  @include mixins.header-2;
+}
+
+.search__description {
+  @include mixins.paragraph;
+}
+
+.map {
+  &::after {
+    @include mixins.centered;
+    background-color: colors-variadle.$special-cold-normal;
+    border-color: colors-variadle.$basic-white;
+  }
+}
+
+.footer__hashtag {
+  @include mixins.header-2;
+  color: colors-variadle.$basic-black;
+}
+
+.social__link {
+  background-color: colors-variadle.$special-cold-normal;
+  color: colors-variadle.$basic-white;
+
+  &:hover {
+    background-color: colors-variadle.$special-cold-hover;
+  }
+
+  &:active {
+    background-color: colors-variadle.$special-cold-active;
+    color: opacify(colors-variadle.$special-cold-normal, 0.3);
+  }
+}
+
+.social__link svg {
+  @include mixins.centered;
+}
+
+.copyright__link {
+  @include mixins.paragraph;
+  color: colors-variadle.$basic-black;
+
+  &:hover {
+    color: colors-variadle.$special-cold-normal;
+  }
+
+  &:active {
+    color: colors-variadle.$basic-black;
+    opacity: 0.3;
+  }
+}
