@@ -3,6 +3,7 @@
 * Студент: [PolinaT](https://up.htmlacademy.ru/adaptive/26/user/2009235).
 * Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742).
 
+Ссылка на страницу поекта: https://timonp.github.io/2009235-sedona-26/source/index.html
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
