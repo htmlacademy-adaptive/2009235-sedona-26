@@ -14,8 +14,7 @@
   }
 
   &:active {
-    color: variables.$basic-black;
-    opacity: 0.3;
+    color: rgba(variables.$basic-black, 0.3);
   }
 }
 
