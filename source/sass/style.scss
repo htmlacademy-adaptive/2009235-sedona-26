@@ -1,4 +1,10 @@
+/*components*/
+@use "./components/fonts.scss";
 @use "./components/variables.scss";
+@use "./components/mixins.scss";
+@use "./components/global.scss";
+@use "./components/button.scss";
+/*blocks*/
 /*PAGE*/
 @use "./blocks/page.scss";
 /*HEAADER*/

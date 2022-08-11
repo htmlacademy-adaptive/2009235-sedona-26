@@ -1,3 +1,5 @@
+@use "./variables.scss";
+
 @mixin visually-hidden {
   position: absolute;
   width: 1px;
@@ -45,4 +47,22 @@
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+@mixin mobile {
+  @media (max-width: variables.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: variables.$desktop) {
+    @content;
+  }
 }

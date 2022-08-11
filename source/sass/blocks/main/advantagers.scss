@@ -1,3 +1,6 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .advantagers__list {
   list-style: none;
   margin: 0;
@@ -18,6 +21,8 @@
   }
 
   &--pre-photo {
+    background-color: variables.$special-cold-normal;
+    color: variables.$basic-white;
     padding-top: 39px;
     padding-bottom: 35px;
   }
@@ -94,6 +99,7 @@
   }
 
   &--group {
+    background-color: variables.$basic-light;
     padding: 26px 35px;
     position: relative;
   }
@@ -103,6 +109,7 @@
   }
 
   &--group + &--group::after {
+    background-color: variables.$basic-gray;
     content: "";
     position: absolute;
     height: 1px;
@@ -128,5 +135,10 @@
 }
 
 .advantages__title {
+  @include mixins.header-2;
   margin-bottom: 11px;
+}
+
+.advantages__description {
+  @include mixins.paragraph;
 }

@@ -1,8 +1,22 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .copyright__link {
+  @include mixins.paragraph;
+  color: variables.$basic-black;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   transition: 220ms all ease-in-out;
+
+  &:hover {
+    color: variables.$special-cold-normal;
+  }
+
+  &:active {
+    color: variables.$basic-black;
+    opacity: 0.3;
+  }
 }
 
 .copyright__link-icon {

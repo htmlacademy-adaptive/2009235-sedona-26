@@ -1,3 +1,6 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .search {
   padding: 38px 18px;
   padding-bottom: 49px;
@@ -6,7 +9,12 @@
 }
 
 .search__title {
+  @include mixins.header-2;
   margin-bottom: 20px;
+}
+
+.search__description {
+  @include mixins.paragraph;
 }
 
 .search__button {

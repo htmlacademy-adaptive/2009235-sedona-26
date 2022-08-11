@@ -1,3 +1,6 @@
+@use "../components/variables.scss";
+@use "../components/mixins.scss";
+
 .page__body {
   font-family: "PT Sans", "Helvetica", sans-serif;
   padding: 0;
@@ -6,6 +9,7 @@
   /*Сглаживание текста*/
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
+  background-color: variables.$basic-light;
 }
 
 .page__container {
@@ -16,4 +20,5 @@
   justify-content: space-between;
   flex-direction: column;
   min-height: 100vh;
+  background-color: variables.$basic-white;
 }

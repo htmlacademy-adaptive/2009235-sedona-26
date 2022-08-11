@@ -1,13 +1,16 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .introduction__wrapper {
   position: relative;
 
   &--hero {
-    background-color: #5496bd;
     background-image: url("../../../img/back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 90px 0 85px 0;
+    background-color: variables.$special-cold-active;
 
     &::after {
       content: "";
@@ -47,10 +50,13 @@
 }
 
 .introduction__title {
+  @include mixins.header-2;
   margin-bottom: 35px;
   padding: 0 25px;
 }
 
 .introduction__description {
+  @include mixins.paragraph;
+  color: variables.$basic-dark;
   padding: 0 20px;
 }

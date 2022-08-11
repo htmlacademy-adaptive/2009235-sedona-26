@@ -1,3 +1,6 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .footer {
   padding-top: 28.5px;
   padding-bottom: 23px;
@@ -7,6 +10,8 @@
 }
 
 .footer__hashtag {
+  @include mixins.header-2;
+  color: variables.$basic-black;
   text-decoration: none;
   margin-bottom: 33px;
 }

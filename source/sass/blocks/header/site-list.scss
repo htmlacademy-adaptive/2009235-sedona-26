@@ -1,3 +1,6 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .site-list {
   list-style: none;
 }
@@ -5,6 +8,7 @@
 .site-list__item {
   display: block;
   position: relative;
+  background-color: variables.$special-cold-normal;
 
   &:not(:last-child)::after {
     content: "";
@@ -39,4 +43,5 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  color: variables.$basic-white;
 }

@@ -1,8 +1,14 @@
+@use "../../components/variables.scss";
+@use "../../components/mixins.scss";
+
 .map {
   min-height: 350px;
   position: relative;
 
   &::after {
+    @include mixins.centered;
+    background-color: variables.$special-cold-normal;
+    border-color: variables.$basic-white;
     content: "";
     aspect-ratio: 1/1;
     width: 27px;
