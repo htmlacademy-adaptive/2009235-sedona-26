@@ -1,5 +1,5 @@
-@use "../../components/variables.scss";
-@use "../../components/mixins.scss";
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
 
 .copyright__link {
   @include mixins.paragraph;
@@ -7,7 +7,7 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  transition: 220ms all ease-in-out;
+  transition: variables.$transition-all;
 
   &:hover {
     color: variables.$special-cold-normal;

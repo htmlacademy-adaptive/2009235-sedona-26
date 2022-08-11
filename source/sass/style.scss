@@ -1,8 +1,8 @@
 /*components*/
-@use "./components/fonts.scss";
-@use "./components/variables.scss";
-@use "./components/mixins.scss";
-@use "./components/global.scss";
+@use "./libs/variables.scss";
+@use "./libs/mixins.scss";
+@use "./global/fonts.scss";
+@use "./global/utils.scss";
 @use "./components/button.scss";
 /*blocks*/
 /*PAGE*/

@@ -1,5 +1,5 @@
-@use "./variables.scss";
-@use "./mixins.scss";
+@use "../libs/variables.scss";
+@use "../libs/mixins.scss";
 
 button.button {
   border: none;
@@ -30,7 +30,7 @@ button.button {
   line-height: 26px;
   text-transform: uppercase;
   text-decoration: none;
-  transition: 220ms all ease-in-out;
+  transition: variables.$transition-all;
 
   &:hover {
     background-color: variables.$special-cold-hover;

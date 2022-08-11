@@ -1,5 +1,5 @@
-@use "../../components/variables.scss";
-@use "../../components/mixins.scss";
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
 
 .social__list {
   list-style: none;
@@ -19,7 +19,7 @@
   height: 48px;
   position: relative;
   display: block;
-  transition: 220ms all ease-in-out;
+  transition: variables.$transition-all;
   background-color: variables.$special-cold-normal;
   color: variables.$basic-white;
 

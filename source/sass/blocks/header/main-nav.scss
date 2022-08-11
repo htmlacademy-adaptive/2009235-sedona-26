@@ -1,5 +1,5 @@
-@use "../../components/variables.scss";
-@use "../../components/mixins.scss";
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
 
 .main-nav {
   position: relative;
@@ -21,7 +21,7 @@
   background-image: url("../../../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   background-position: center;
-  transition: 220ms all ease-in-out;
+  transition: variables.$transition-all;
   color: variables.$special-cold-normal;
 
   &:hover {
@@ -31,13 +31,20 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--close {
+    background-image: url("../../../img/icon-menu-close.svg");
+  }
 }
 
 .main-nav__wrapper {
   position: absolute;
   z-index: 2;
   width: 100%;
-  display: none;
+
+  &--close {
+    display: none;
+  }
 }
 
 .main-nav__list {
