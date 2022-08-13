@@ -1,0 +1,21 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
+.footer {
+  padding-top: 28.5px;
+  padding-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__hashtag {
+  @include mixins.header-2;
+  color: variables.$basic-black;
+  text-decoration: none;
+  margin-bottom: 33px;
+}
+
+.footer__social {
+  margin-bottom: 34px;
+}

@@ -1,0 +1,66 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  cursor: pointer;
+  font: inherit;
+  display: block;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 63px;
+  height: 56px;
+  position: relative;
+  float: right;
+  z-index: 3;
+  background-image: url("../../../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: variables.$transition-all;
+  color: variables.$special-cold-normal;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--close {
+    background-image: url("../../../img/icon-menu-close.svg");
+  }
+}
+
+.main-nav__toggle:hover + .main-nav__wrapper {
+  transform: scaleY(1);
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  transform-origin: 0 0;
+  transition: transform 0.3s ease-out;
+  transform: scaleY(0);
+
+  &:hover {
+    transform: scaleY(1);
+  }
+
+  &--open {
+    transform: scaleY(1);
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}

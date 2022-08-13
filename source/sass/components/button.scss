@@ -1,0 +1,53 @@
+@use "../libs/variables.scss";
+@use "../libs/mixins.scss";
+
+button.button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+a.button,
+button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  background-color: variables.$special-cold-normal;
+  color: variables.$basic-white;
+  border-radius: 0;
+  box-shadow: none;
+  // Size
+  padding: 16px 40px;
+  min-width: 180px;
+  min-height: 58px;
+  // Text
+  text-align: center;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: variables.$transition-all;
+
+  &:hover {
+    background-color: variables.$special-cold-hover;
+  }
+
+  &:active {
+    background-color: variables.$special-cold-active;
+    color: opacify(variables.$special-cold-normal, 0.3);
+  }
+
+  &:disabled {
+    background-color: variables.$special-cold-disable;
+  }
+
+  &--block {
+    width: 100%;
+    max-width: 458px;
+    align-self: center;
+  }
+}

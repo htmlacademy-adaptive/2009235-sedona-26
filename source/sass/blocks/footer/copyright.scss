@@ -1,0 +1,23 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
+.copyright__link {
+  @include mixins.paragraph;
+  color: variables.$basic-black;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: variables.$transition-all;
+
+  &:hover {
+    color: variables.$special-cold-normal;
+  }
+
+  &:active {
+    color: rgba(variables.$basic-black, 0.3);
+  }
+}
+
+.copyright__link-icon {
+  margin-left: 11px;
+}

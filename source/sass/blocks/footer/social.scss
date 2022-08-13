@@ -1,0 +1,38 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
+.social__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -3px;
+}
+
+.social__item {
+  margin: 0 6px;
+  margin-bottom: 6px;
+}
+
+.social__link {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: block;
+  transition: variables.$transition-all;
+  background-color: variables.$special-cold-normal;
+  color: variables.$basic-white;
+
+  &:hover {
+    background-color: variables.$special-cold-hover;
+  }
+
+  &:active {
+    background-color: variables.$special-cold-active;
+    color: opacify(variables.$special-cold-normal, 0.3);
+  }
+}
+
+.social__link svg {
+  @include mixins.centered;
+}
