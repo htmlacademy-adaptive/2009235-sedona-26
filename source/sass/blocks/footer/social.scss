@@ -7,10 +7,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -3px;
+  margin-bottom: -6px;
+  max-width: 270px;
 }
 
 .social__item {
-  margin: 0 6px;
+  margin: 0 3px;
   margin-bottom: 6px;
 }
 

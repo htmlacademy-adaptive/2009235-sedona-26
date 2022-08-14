@@ -23,21 +23,35 @@
       background-repeat: no-repeat;
       background-position: center bottom;
     }
+
+    @include mixins.tablet {
+      padding: 77px 0 91px 0;
+    }
   }
 
   &--info {
     padding: 32px 0;
 
-    &::after {
-      content: "";
-      display: block;
-      height: 37px;
-      position: absolute;
-      bottom: -21px;
-      width: 100%;
-      background-image: url("../../../img/intro-info-triangle.svg");
-      background-repeat: no-repeat;
-      background-position: center bottom;
+    @include mixins.tablet {
+      padding: 47.5px 0 56.5px 0;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+  }
+
+  &--info::after {
+    content: "";
+    display: block;
+    height: 37px;
+    position: absolute;
+    bottom: -21px;
+    width: 100%;
+    background-image: url("../../../img/intro-info-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @include mixins.tablet {
+      display: none;
     }
   }
 }
@@ -47,16 +61,29 @@
   height: 214px;
   display: block;
   margin: 0 auto;
+
+  @include mixins.tablet {
+    width: 461px;
+    height: 350px;
+  }
 }
 
 .introduction__title {
   @include mixins.header-2;
   margin-bottom: 35px;
   padding: 0 25px;
+
+  @include mixins.tablet {
+    margin-bottom: 28px;
+  }
 }
 
 .introduction__description {
   @include mixins.paragraph;
   color: variables.$basic-dark;
   padding: 0 20px;
+
+  @include mixins.tablet {
+    padding: 0 10px;
+  }
 }

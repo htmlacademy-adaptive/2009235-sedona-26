@@ -6,6 +6,11 @@
   margin: 0;
   padding: 0;
   display: grid;
+
+  @include mixins.tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
+  }
 }
 
 .advantagers__item {
@@ -15,9 +20,17 @@
   justify-content: center;
   padding: 0 18px;
 
-  &:first-of-type {
-    padding-top: 54px;
-    padding-bottom: 40px;
+  @include mixins.mobile {
+    &:first-of-type {
+      padding-top: 54px;
+      padding-bottom: 40px;
+    }
+  }
+
+  @include mixins.tablet {
+    min-height: 256px;
+    justify-content: flex-start;
+    padding: 42px 25px;
   }
 
   &--pre-photo {
@@ -27,29 +40,68 @@
     padding-bottom: 35px;
   }
 
+  @include mixins.tablet {
+    &--pre-photo:nth-of-type(2n) {
+      padding: 43px 36px;
+      padding-bottom: 41px;
+      grid-column: 3 /4;
+    }
+
+    &--pre-photo .advantages__description {
+      max-width: 275px;
+    }
+
+    &--pre-photo:nth-of-type(2n) .advantages__description {
+      max-width: 234px;
+    }
+  }
+
+
   &--photo {
     min-height: 260px;
     position: relative;
+
+    @include mixins.tablet {
+      grid-column: span 2;
+      min-height: 256px;
+    }
   }
 
   @mixin benefits {
-    justify-content: start;
     display: grid;
     grid-template-columns: 40px auto;
     row-gap: 16px;
+    justify-content: start;
     padding: 11px 18px;
+    grid-auto-flow: dense;
+
+    @include mixins.tablet {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-content: start;
+      padding: 57px 18px 60px 18px;
+      gap: 23px;
+      min-height: 330px;
+    }
   }
 
   @mixin benefits-icon {
     content: "";
     display: block;
     aspect-ratio: 1 / 1;
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
-    align-self: start;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include mixins.mobile {
+      grid-row: 1 / 3;
+      grid-column: 1 / 2;
+      align-self: start;
+    }
+
+    @include mixins.tablet {
+      width: 75px;
+    }
   }
 
   &--housing {
@@ -60,6 +112,10 @@
     &::before {
       @include benefits-icon;
       background-image: url("../../../img/hause.svg");
+    }
+
+    @include mixins.tablet {
+      padding: 57px 36px 60px 36px;
     }
   }
 
@@ -82,40 +138,80 @@
       @include benefits-icon;
       background-image: url("../../../img/present.svg");
     }
+
+    @include mixins.tablet {
+      padding: 57px 30px 60px 30px;
+    }
   }
 
   &--housing .advantages__title,
   &--eat .advantages__title,
   &--souvenirs .advantages__title {
-    margin-top: 8px;
-    margin-bottom: 0;
-    text-align: left;
+    @include mixins.mobile {
+      margin-top: 8px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    @include mixins.tablet {
+      margin-top: 3px;
+      margin-bottom: 0;
+    }
   }
 
   &--housing .advantages__description,
   &--eat .advantages__description,
   &--souvenirs .advantages__description {
-    text-align: left;
+    @include mixins.mobile {
+      text-align: left;
+    }
+
+    @include mixins.tablet {
+      max-width: 260px;
+    }
+  }
+
+  &--eat .advantages__description {
+    @include mixins.tablet {
+      max-width: 282px;
+    }
+  }
+
+  &--souvenirs br {
+    display: none;
+
+    @include mixins.desktop {
+      display: inline;
+    }
   }
 
   &--group {
     background-color: variables.$basic-light;
-    padding: 26px 35px;
-    position: relative;
+
+    @include mixins.mobile {
+      padding: 26px 35px;
+      position: relative;
+    }
+
+    @include mixins.tablet {
+      padding: 42px 40px;
+    }
   }
 
-  &--group + &--group {
-    padding-top: 23px;
-  }
+  @include mixins.mobile {
+    &--group + &--group {
+      padding-top: 23px;
+    }
 
-  &--group + &--group::after {
-    background-color: variables.$basic-gray;
-    content: "";
-    position: absolute;
-    height: 1px;
-    top: -2px;
-    left: 18px;
-    right: 18px;
+    &--group + &--group::after {
+      background-color: variables.$basic-gray;
+      content: "";
+      position: absolute;
+      height: 1px;
+      top: -2px;
+      left: 18px;
+      right: 18px;
+    }
   }
 }
 
@@ -132,11 +228,20 @@
 
 .advantages__description + .advantages__description {
   margin-top: 17px;
+
+  @include mixins.tablet {
+    margin-top: 23px;
+  }
 }
 
 .advantages__title {
   @include mixins.header-2;
   margin-bottom: 11px;
+
+  @include mixins.tablet {
+    margin-bottom: 12px;
+    width: min-content;
+  }
 }
 
 .advantages__description {
