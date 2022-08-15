@@ -41,29 +41,16 @@
   }
 }
 
-@include mixins.mobile {
-  .main-nav__toggle:hover + .main-nav__wrapper {
-    transform: scaleY(1);
-  }
-}
-
-
 .main-nav__wrapper {
   z-index: 2;
   width: 100%;
   position: absolute;
 
   @include mixins.mobile {
-    transform-origin: 0 0;
-    transition: transform 0.3s ease-out;
-    transform: scaleY(0);
-
-    &:hover {
-      transform: scaleY(1);
-    }
+    display: none;
 
     &--open {
-      transform: scaleY(1);
+      display: block;
     }
   }
 
