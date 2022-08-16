@@ -6,17 +6,44 @@
   padding-bottom: 49px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @include mixins.tablet {
+    padding: 61px 50px;
+    padding-bottom: 66px;
+  }
 }
 
 .search__title {
   @include mixins.header-2;
+  font-size: 21px;
+  line-height: 26px;
   margin-bottom: 20px;
+
+  @include mixins.tablet {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .search__description {
   @include mixins.paragraph;
+
+  @include mixins.tablet {
+    max-width: 435px;
+  }
+}
+
+.search__description br {
+  @include mixins.mobile {
+    display: none;
+  }
 }
 
 .search__button {
   margin-top: 32px;
+
+  @include mixins.tablet {
+    margin-top: 46px;
+  }
 }

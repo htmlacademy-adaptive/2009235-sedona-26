@@ -9,27 +9,39 @@
   display: block;
   position: relative;
   background-color: variables.$special-cold-normal;
+  color: variables.$basic-white;
 
-  &:not(:last-child)::after {
-    content: "";
-    display: block;
-    height: 1px;
-    box-shadow: inset 0 1px 0 rgba(1, 1, 1, 0.2);
+  @include mixins.mobile {
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      height: 1px;
+      box-shadow: inset 0 1px 0 rgba(1, 1, 1, 0.2);
+    }
+
+    &:last-child::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 7px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+
+    &:not(:first-child) {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
   }
 
-  &:last-child::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 7px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-  }
+  @include mixins.tablet {
+    background-color: transparent;
+    color: variables.$basic-black;
 
-  &:not(:first-child) {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    &--active {
+      color: variables.$special-warm-light;
+    }
   }
 }
 
@@ -43,5 +55,19 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: variables.$basic-white;
+  color: inherit;
+
+  @include mixins.tablet {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 18px 20px 17px 20px;
+
+    &:hover {
+      color: variables.$special-cold-normal;
+    }
+
+    &:active {
+      color: rgba(variables.$basic-black, 0.3);
+    }
+  }
 }

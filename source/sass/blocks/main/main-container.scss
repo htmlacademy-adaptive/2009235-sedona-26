@@ -1,4 +1,11 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
 .main-container {
   flex-grow: 1;
   padding-bottom: 10px;
+
+  @include mixins.tablet {
+    padding-bottom: 0;
+  }
 }
