@@ -1,5 +1,6 @@
 @use "../../libs/variables.scss";
 @use "../../libs/mixins.scss";
+@use "../../libs/animation.scss";
 
 .main-nav {
   position: relative;
@@ -51,6 +52,10 @@
 
     &--open {
       display: block;
+      animation-name: menu-open;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -75,6 +80,20 @@
       display: block;
       grid-row: span 2;
       grid-column: 3 / 4;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .main-nav--no-js {
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__wrapper {
+      position: relative;
+      display: block;
+      margin-bottom: variables.$header-height;
     }
   }
 }

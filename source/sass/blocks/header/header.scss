@@ -1,6 +1,9 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
 .header {
   position: relative;
-  min-height: 56px;
+  min-height: variables.$header-height;
 }
 
 .header__logo {
@@ -14,4 +17,8 @@
   margin: 0 auto;
   cursor: pointer;
   z-index: 1;
+
+  @include mixins.mobile {
+    top: calc(100% - variables.$header-height);
+  }
 }
