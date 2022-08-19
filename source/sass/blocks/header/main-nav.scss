@@ -86,11 +86,11 @@
 
 @include mixins.mobile {
   .main-nav--no-js {
-    & .main-nav__toggle {
+    .main-nav__toggle {
       display: none;
     }
 
-    & .main-nav__wrapper {
+    .main-nav__wrapper {
       position: relative;
       display: block;
       margin-bottom: variables.$header-height;

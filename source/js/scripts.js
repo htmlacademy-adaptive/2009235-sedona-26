@@ -4,7 +4,7 @@ let main_button = document.querySelector('.main-nav__toggle');
 
 noJS.classList.remove('main-nav--no-js');
 
-main_button.onclick = function () {
+main_button.addEventListener('click', () => {
   main_menu.classList.toggle('main-nav__wrapper--open');
   main_button.classList.toggle('main-nav__toggle--close');
-};
+});
