@@ -12,6 +12,10 @@
     padding: 90px 0 85px 0;
     background-color: variables.$special-cold-active;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/back-desktop@2x.jpg");
+    }
+
     &::after {
       content: "";
       display: block;
