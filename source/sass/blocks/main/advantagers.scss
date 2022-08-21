@@ -226,14 +226,6 @@
   bottom: 0;
 }
 
-.advantages__description + .advantages__description {
-  margin-top: 17px;
-
-  @include mixins.tablet {
-    margin-top: 23px;
-  }
-}
-
 .advantages__title {
   @include mixins.header-2;
   margin-bottom: 11px;
@@ -246,4 +238,12 @@
 
 .advantages__description {
   @include mixins.paragraph;
+
+  & + & {
+    margin-top: 17px;
+
+    @include mixins.tablet {
+      margin-top: 23px;
+    }
+  }
 }
