@@ -38,6 +38,10 @@
     color: variables.$basic-white;
     padding-top: 39px;
     padding-bottom: 35px;
+
+    @include mixins.desktop {
+      padding-top: 48px;
+    }
   }
 
   @include mixins.tablet {
@@ -56,6 +60,11 @@
     }
   }
 
+  @include mixins.desktop {
+    &--pre-photo:nth-of-type(2n) {
+      padding: 51px 36px;
+    }
+  }
 
   &--photo {
     min-height: 260px;
@@ -64,6 +73,12 @@
     @include mixins.tablet {
       grid-column: span 2;
       min-height: 256px;
+    }
+
+    @include mixins.desktop {
+      &:nth-of-type(2n+1) .advantagers__item-image {
+          object-position: 0 10%;
+      }
     }
   }
 
@@ -140,7 +155,7 @@
     }
 
     @include mixins.tablet {
-      padding: 57px 30px 60px 30px;
+      padding: 57px 32px 60px 32px;
     }
   }
 

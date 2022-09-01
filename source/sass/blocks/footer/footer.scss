@@ -9,9 +9,15 @@
   align-items: center;
 
   @include mixins.tablet {
-    padding: 36px 0;
+    padding: 36px 0px;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  @include mixins.desktop {
+    padding: 36px 105px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -20,6 +26,8 @@
   color: variables.$basic-black;
   text-decoration: none;
   margin-bottom: 33px;
+  font-size: 21px;
+  line-height: 26px;
 
   @include mixins.tablet {
     min-width: 166px;
