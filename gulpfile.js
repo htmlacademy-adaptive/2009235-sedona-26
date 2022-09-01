@@ -28,17 +28,6 @@ const styles = () => {
     .pipe(browser.stream());
 }
 
-export const styles2 = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
-
 // HTML
 const html = () => {
   return gulp.src('source/*.html')
@@ -123,7 +112,7 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss').on('change', gulp.series(styles, styles2)); //при изменении запустить задачу styles & reload
+  gulp.watch('source/sass/**/*.scss').on('change', styles); //при изменении запустить задачу styles & reload
   gulp.watch('source/js/*.js').on('change', gulp.series(scripts, reload));
   gulp.watch('source/*.html').on('change', gulp.series(html,reload));
 }
@@ -160,7 +149,6 @@ export default gulp.series(
     createWebp
   ),
   sprite,
-  styles2,
   server,
   watcher
 );
