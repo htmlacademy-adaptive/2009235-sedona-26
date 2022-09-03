@@ -71,7 +71,7 @@
     position: relative;
 
     &:nth-of-type(2n+1) .advantagers__item-image {
-      object-position: 0 10%;
+      object-position: center 10%;
     }
 
     @include mixins.tablet {
