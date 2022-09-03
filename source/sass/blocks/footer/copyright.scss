@@ -17,6 +17,10 @@
 }
 
 .copyright__link-icon {
-  margin-left: 11px;
+  margin-left: 9px;
   vertical-align: middle;
+
+  @include mixins.tablet {
+    margin-right: -10px;
+  }
 }

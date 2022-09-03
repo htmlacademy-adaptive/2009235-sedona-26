@@ -2,14 +2,18 @@
 @use "../../libs/mixins.scss";
 
 .search {
-  padding: 38px 18px;
+  padding: 41px 18px;
   padding-bottom: 49px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include mixins.tablet {
-    padding: 61px 50px;
+    padding: 60px 50px;
+    padding-bottom: 58px;
+  }
+
+  @include mixins.desktop {
     padding-bottom: 66px;
   }
 }
@@ -23,6 +27,11 @@
   @include mixins.tablet {
     font-size: 30px;
     line-height: 26px;
+    margin-bottom: 32px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 33px;
   }
 }
 
@@ -44,6 +53,10 @@
   margin-top: 32px;
 
   @include mixins.tablet {
+    margin-top: 42px;
+  }
+
+  @include mixins.desktop {
     margin-top: 46px;
   }
 }

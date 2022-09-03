@@ -77,7 +77,7 @@ const sprite = () => {
 
 const copy = (done) => {
   return gulp.src([
-    'source/fonts/*.{woff2, woff}',
+    'source/fonts/*.{woff2,woff}',
     'source/*.ico',
 ], {
   base:'source'
@@ -107,14 +107,14 @@ const server = (done) => {
 //Reload
 const reload = (done) => {
   browser.reload();
-  done();
+  //done();
 }
 
 // Watcher
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles)); //при изменении запкстить задачу styles
-  gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html'), gulp.series(html, reload);
+  gulp.watch('source/sass/**/*.scss').on('change', styles); //при изменении запустить задачу styles & reload
+  gulp.watch('source/js/*.js').on('change', gulp.series(scripts, reload));
+  gulp.watch('source/*.html').on('change', gulp.series(html,reload));
 }
 
 
