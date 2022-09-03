@@ -51,11 +51,11 @@
       grid-column: 3 /4;
     }
 
-    &--pre-photo .advantages__description {
+    &--pre-photo .advantagers__description {
       max-width: 275px;
     }
 
-    &--pre-photo:nth-of-type(2n) .advantages__description {
+    &--pre-photo:nth-of-type(2n) .advantagers__description {
       max-width: 234px;
     }
   }
@@ -157,9 +157,9 @@
     }
   }
 
-  &--housing .advantages__title,
-  &--eat .advantages__title,
-  &--souvenirs .advantages__title {
+  &--housing .advantagers__title,
+  &--eat .advantagers__title,
+  &--souvenirs .advantagers__title {
     @include mixins.mobile {
       margin-top: 8px;
       margin-bottom: 0;
@@ -172,9 +172,9 @@
     }
   }
 
-  &--housing .advantages__description,
-  &--eat .advantages__description,
-  &--souvenirs .advantages__description {
+  &--housing .advantagers__description,
+  &--eat .advantagers__description,
+  &--souvenirs .advantagers__description {
     @include mixins.mobile {
       text-align: left;
     }
@@ -184,7 +184,7 @@
     }
   }
 
-  &--eat .advantages__description {
+  &--eat .advantagers__description {
     @include mixins.tablet {
       max-width: 282px;
     }
@@ -239,7 +239,7 @@
   bottom: 0;
 }
 
-.advantages__title {
+.advantagers__title {
   @include mixins.header-2;
   margin-bottom: 11px;
 
@@ -249,7 +249,7 @@
   }
 }
 
-.advantages__description {
+.advantagers__description {
   @include mixins.paragraph;
 
   & + & {
